@@ -4,10 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
   <title>HW - JS Loops</title>
 </head>
 <body>
-  
+  <div class="container">
+    <!-- Task 1.1 -->
+    <section class="task task--age">
+      <h2 class="task__title">Determine Age Group</h2>
+      <label class="task__label" for="age">Enter your age:</label>
+      <input class="task__input" type="number" id="age">
+      <button class="task__button" id="age-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="age-result"></p>
+    </section>
+
+    <!-- Task 1.2 -->
+    <section class="task task--symbol">
+      <h2 class="task__title">Find Special Symbol</h2>
+      <label class="task__label" for="number">Enter a number (0-9):</label>
+      <input class="task__input" type="number" id="number">
+      <button class="task__button" id="number-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="number-result"></p>
+    </section>
+
+    <!-- Task 1.3 -->
+    <section class="task task--sum">
+      <h2 class="task__title">Calculate Sum</h2>
+      <label class="task__label" for="range-start">Enter range start:</label>
+      <input class="task__input" type="number" id="range-start">
+      <label class="task__label" for="range-end">Enter range end:</label>
+      <input class="task__input" type="number" id="range-end">
+      <button class="task__button" id="range-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="range-result"></p>
+    </section>
+
+    <!-- Task 1.4 -->
+    <section class="task task--gcd">
+      <h2 class="task__title">Find GCD of 2 positive numbers</h2>
+      <label class="task__label" for="gcd-number1">Enter first number:</label>
+      <input class="task__input" type="number" id="gcd-number1">
+      <label class="task__label" for="gcd-number2">Enter second number:</label>
+      <input class="task__input" type="number" id="gcd-number2">
+      <button class="task__button" id="gcd-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="gcd-result"></p>
+    </section>
+
+    <!-- Task 1.5 -->
+    <section class="task task--divisors">
+      <h2 class="task__title">Find Divisors</h2>
+      <label class="task__label" for="divisor-number">Enter a number:</label>
+      <input class="task__input" type="number" id="divisor-number">
+      <button class="task__button" id="divisor-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="divisor-result"></p>
+    </section>
+
+    <!-- Task 2.1-->
+    <section class="task task--palindrome">
+      <h2 class="task__title">Check Palindrome</h2>
+      <label class="task__label" for="palindrome-number">Enter a number:</label>
+      <input class="task__input" type="number" id="palindrome-number">
+      <button class="task__button" id="palindrome-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="palindrome-result"></p>
+    </section>
+
+    <!-- Task 2.2 -->
+    <section class="task task--discount">
+      <h2 class="task__title">Calculate Purchase Discount</h2>
+      <label class="task__label" for="purchase-amount">Enter purchase amount:</label>
+      <input class="task__input" type="number" id="purchase-amount">
+      <button class="task__button" id="discount-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="discount-result"></p>
+    </section>
+
+    <!-- Task 2.3 -->
+    <section class="task task--statistics">
+      <h2 class="task__title">Number Statistics</h2>
+      <label class="task__label" for="statistics-number">Enter 10 numbers (comma-separated):</label>
+      <input class="task__input" type="text" id="statistics-number">
+      <button class="task__button" id="statistics-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="statistics-result"></p>
+    </section>
+
+    <!-- Task 2.4 -->
+    <section class="task task--weekdays">
+      <h2 class="task__title">Day of the Week Loop</h2>
+      <button class="task__button" id="weekday-submit">Show Next Day</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="weekday-result"></p>
+    </section>
+
+    <!-- Task 3.1 -->
+    <section class="task task--guess">
+      <h2 class="task__title">Guess the Number</h2>
+      <button  class="task__button" id="guess-start">Start Guessing</button>
+      <button hidden class="task__button" id="less-number">Less</button>
+      <button hidden class="task__button" id="guess-end">Exact</button>
+      <button hidden class="task__button" id="bigger-number">Bigger</button>
+      <button class="reset__button" id="block-refresh">Reset</button>
+      <p class="task__result" id="guess-result"></p>
+    </section>
+
+    <!-- Task 3.2 -->
+    <section class="task task--multiplication">
+      <h2 class="task__title">Multiplication Table</h2>
+      <button class="task__button" id="multiplication-generate">Generate Table</button>
+      <button class="reset__button">Reset</button>
+      <div class="task__result task__result--multiplication" id="multiplication-result"></div>
+    </section>
+
+    <!-- Task 3.3 -->
+    <section class="task task--date">
+      <h2 class="task__title">Find Next Date</h2>
+      <label class="task__label" for="user-date">Enter date:</label>
+      <input class="task__input" type="date" id="user-date" min="1900-01-01" max="2130-01-01">
+      <button class="task__button" id="date-submit">Submit</button>
+      <button class="reset__button">Reset</button>
+      <p class="task__result" id="date-result"></p>
+    </section>
+  </div>
 </body>
 </html>
