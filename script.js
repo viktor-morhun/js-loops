@@ -230,7 +230,7 @@ function dayRoll() {
 const GUESS_START = document.getElementById('guess-start');
 GUESS_START.addEventListener('click', startGuess);
 
-function startGuess(dir) {
+function startGuess() {
   const DECREASE_BUTTON = document.getElementById('less-number');
   const INCREASE_BUTTON = document.getElementById('bigger-number');
   const RESET_BUTTON = document.getElementById('block-refresh');
@@ -244,8 +244,8 @@ function startGuess(dir) {
 
   DECREASE_BUTTON.addEventListener('click', lowerHalf);
   INCREASE_BUTTON.addEventListener('click', upperHalf);
-  GUESS_END.addEventListener('click', endGuess);
-  RESET_BUTTON.addEventListener('click', resetBlock);
+  GUESS_END.addEventListener('click', () => endGuess(`Your number is ${midNumber}`));
+  RESET_BUTTON.addEventListener('click', () => endGuess(''));
 
   let startIndex = 1;
   let endIndex = 100;
@@ -265,22 +265,13 @@ function startGuess(dir) {
     GUESS_RESULT.innerHTML = `Is your number ${midNumber}?`;
   }
   
-  function endGuess() { 
+  function endGuess(output) { 
     GUESS_START.removeAttribute('hidden');
     DECREASE_BUTTON.setAttribute('hidden', '');
     GUESS_END.setAttribute('hidden', '');
     INCREASE_BUTTON.setAttribute('hidden', '');
-  
-    GUESS_RESULT.innerHTML = `Your number is ${midNumber}`;
-  }
 
-  function resetBlock() {
-    GUESS_START.removeAttribute('hidden');
-    DECREASE_BUTTON.setAttribute('hidden', '');
-    INCREASE_BUTTON.setAttribute('hidden', '');
-    GUESS_END.setAttribute('hidden', '');
-
-    GUESS_RESULT.innerHTML = '';
+    GUESS_RESULT.innerHTML = output;
   }
 }
 
