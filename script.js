@@ -237,10 +237,10 @@ function startGuess() {
   const GUESS_END = document.getElementById('guess-end');
   const GUESS_RESULT = document.getElementById('guess-result');
 
-  GUESS_START.classList.toggle('hide');
-  DECREASE_BUTTON.classList.toggle('hide');
-  GUESS_END.classList.toggle('hide');
-  INCREASE_BUTTON.classList.toggle('hide');
+  GUESS_START.classList.add('hide');
+  DECREASE_BUTTON.classList.remove('hide');
+  GUESS_END.classList.remove('hide');
+  INCREASE_BUTTON.classList.remove('hide');
 
   DECREASE_BUTTON.addEventListener('click', lowerHalf);
   INCREASE_BUTTON.addEventListener('click', upperHalf);
@@ -266,10 +266,10 @@ function startGuess() {
   }
   
   function endGuess(output) { 
-    GUESS_START.classList.toggle('hide', false);
-    DECREASE_BUTTON.classList.toggle('hide', true);
-    GUESS_END.classList.toggle('hide', true);
-    INCREASE_BUTTON.classList.toggle('hide', true);
+    GUESS_START.classList.remove('hide');
+    DECREASE_BUTTON.classList.add('hide');
+    GUESS_END.classList.add('hide');
+    INCREASE_BUTTON.classList.add('hide');
 
     GUESS_RESULT.innerHTML = output;
   }
